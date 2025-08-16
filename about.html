@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{NGO Name}} — Feeding Hope in India</title>
+  <meta name="description" content="{{NGO Name}} is a non-profit in India providing nutritious meals to people in need." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root { --primary:#2c3e50; --accent:#e67e22; --ok:#27ae60; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, sans-serif; line-height:1.6; color:#333; }
+    header { background:var(--primary); color:#fff; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-weight:bold; }
+    nav a { color:#fff; margin:0 .8rem; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+    section { padding:2.5rem 1.5rem; max-width:1000px; margin:auto; }
+    h1,h2 { color:var(--primary); }
+    .btn { display:inline-block; background:var(--accent); color:#fff; padding:.8rem 1.2rem; border-radius:6px; text-decoration:none; }
+    .btn:hover { background:#d35400; }
+    footer { background:var(--primary); color:#fff; text-align:center; padding:1.2rem; }
+    footer a { color:#fff; text-decoration:underline; margin:0 .5rem; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+    .gallery img { width:100%; border-radius:8px; display:block; }
+    .card { border:1px solid #e5e7eb; border-radius:10px; padding:1rem; background:#fff; }
+    .muted { color:#666; }
+    .hero { background:#f5f7fa; border-bottom:1px solid #e5e7eb; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">{{NGO Name}}</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+<section>
+  <h1>About Us</h1>
+  <p><strong>{{NGO Name}}</strong> is a non-profit organization dedicated to ending hunger and providing nutritious food to needy people across India. Our mission is simple yet powerful — <em>no one should sleep hungry</em>.</p>
+  <h2>What We Do</h2>
+  <ul>
+    <li>Daily food distribution in underserved communities.</li>
+    <li>Emergency relief during disasters and crises.</li>
+    <li>Partnerships to reduce food waste and improve nutrition.</li>
+    <li>Awareness programs on hygiene and balanced meals.</li>
+  </ul>
+  <h2>Impact</h2>
+  <p>With your support, we have served thousands of meals across multiple states. Every contribution directly funds meals for children, families, and the elderly.</p>
+</section>
+  <footer>
+    <p>&copy; {{Year}} {{NGO Name}}. All Rights Reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Use</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+  <!-- GA4 / Ads placeholders -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{GA4_ID}');
+  </script>
+</body>
+</html>

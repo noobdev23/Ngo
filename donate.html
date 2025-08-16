@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{NGO Name}} — Feeding Hope in India</title>
+  <meta name="description" content="{{NGO Name}} is a non-profit in India providing nutritious meals to people in need." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root { --primary:#2c3e50; --accent:#e67e22; --ok:#27ae60; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, sans-serif; line-height:1.6; color:#333; }
+    header { background:var(--primary); color:#fff; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-weight:bold; }
+    nav a { color:#fff; margin:0 .8rem; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+    section { padding:2.5rem 1.5rem; max-width:1000px; margin:auto; }
+    h1,h2 { color:var(--primary); }
+    .btn { display:inline-block; background:var(--accent); color:#fff; padding:.8rem 1.2rem; border-radius:6px; text-decoration:none; }
+    .btn:hover { background:#d35400; }
+    footer { background:var(--primary); color:#fff; text-align:center; padding:1.2rem; }
+    footer a { color:#fff; text-decoration:underline; margin:0 .5rem; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+    .gallery img { width:100%; border-radius:8px; display:block; }
+    .card { border:1px solid #e5e7eb; border-radius:10px; padding:1rem; background:#fff; }
+    .muted { color:#666; }
+    .hero { background:#f5f7fa; border-bottom:1px solid #e5e7eb; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">{{NGO Name}}</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+<section>
+  <h1>Donate</h1>
+  <p>Your support helps us provide hot, nutritious meals to people in need across India.</p>
+  <div class="gallery">
+    <div class="card">
+      <h3>Razorpay (India)</h3>
+      <p>Fastest for Indian donors (UPI, Cards, NetBanking).</p>
+      <p><a class="btn" href="{{RAZORPAY_PAYMENT_LINK}}" target="_blank" rel="noopener">Donate via Razorpay</a></p>
+    </div>
+    <div class="card">
+      <h3>Stripe (International)</h3>
+      <p>Best for international donors (cards, wallets).</p>
+      <p><a class="btn" href="{{STRIPE_PAYMENT_LINK}}" target="_blank" rel="noopener">Donate via Stripe</a></p>
+    </div>
+    <div class="card">
+      <h3>UPI (Direct)</h3>
+      <p>UPI ID: <strong>{{NGO-UPI-ID}}</strong></p>
+      <img src="upi-qr.png" alt="UPI QR" style="max-width:200px;display:block;margin:auto;">
+    </div>
+  </div>
+  <p class="muted">For 80G receipts, email your transaction ID to {{NGO Email}}.</p>
+  <!-- Optional Razorpay Checkout (requires proper setup of orders on server)
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    // Example placeholder only
+    var rzp = new Razorpay({ key: "{{RAZORPAY_KEY}}", amount: "50000", currency: "INR" });
+  </script>
+  -->
+</section>
+  <footer>
+    <p>&copy; {{Year}} {{NGO Name}}. All Rights Reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Use</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+  <!-- GA4 / Ads placeholders -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{GA4_ID}');
+  </script>
+</body>
+</html>
